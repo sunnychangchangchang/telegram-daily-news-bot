@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+TELEGRAM_BOT_TOKEN = re.sub(r'\s', '', os.getenv("TELEGRAM_BOT_TOKEN", ""))
 TELEGRAM_CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID", "").strip()
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip()
 
