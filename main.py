@@ -384,7 +384,7 @@ def format_calendar_section(events: list[dict]) -> str:
         lines.append(
             f"・{date_part} \\({weekday}\\) {time_part} ET\n"
             f"{name_line}\n"
-            f"  預估 {forecast}　前值 {previous}"
+            f"  預估 {forecast}　前值 {previous}\n"
         )
 
     return "\n".join(lines)
