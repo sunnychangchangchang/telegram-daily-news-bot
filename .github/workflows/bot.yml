@@ -2,10 +2,10 @@ name: Daily Market Briefing
 
 on:
   schedule:
-    - cron: '0 15 * * *'   # 11:00 AM ET (summer EDT)
-    - cron: '0 16 * * *'   # 11:00 AM ET (winter EST)
-    - cron: '0 3 * * *'    # 11:00 PM ET (summer EDT)
-    - cron: '0 4 * * *'    # 11:00 PM ET (winter EST)
+    - cron: '0 12 * * *'   # 8:00 AM ET (summer EDT)
+    - cron: '0 13 * * *'   # 8:00 AM ET (winter EST)
+    - cron: '0 0 * * *'    # 8:00 PM ET (summer EDT)
+    - cron: '0 1 * * *'    # 8:00 PM ET (winter EST)
   workflow_dispatch:         # allow manual trigger from GitHub UI
 
 jobs:

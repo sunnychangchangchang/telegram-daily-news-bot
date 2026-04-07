@@ -48,12 +48,12 @@ Watchlist: Bonds · Financials　$TLT  $XLF  $JPM
 
 This bot runs automatically via GitHub Actions — no server required.
 
-The workflow (`.github/workflows/bot.yml`) is scheduled at **11:00 AM ET** and **11:00 PM ET** daily. GitHub handles DST by running at both UTC offsets:
+The workflow (`.github/workflows/bot.yml`) is scheduled at **8:00 AM ET** and **8:00 PM ET** daily. GitHub handles DST by running at both UTC offsets:
 
 | Edition | Summer (EDT) | Winter (EST) |
 |---------|-------------|-------------|
-| Morning | 15:00 UTC | 16:00 UTC |
-| Evening | 03:00 UTC | 04:00 UTC |
+| Morning | 12:00 UTC | 13:00 UTC |
+| Evening | 00:00 UTC | 01:00 UTC |
 
 To set up automated runs on your own fork:
 

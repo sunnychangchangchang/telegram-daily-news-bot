@@ -32,8 +32,8 @@ echo "[2/3] .env found."
 # TZ=America/New_York lets cron interpret the times directly in ET,
 # handling DST automatically without needing separate UTC entries.
 
-CRON_CMD_MORNING="0 11 * * * $PYTHON $SCRIPT_DIR/main.py >> $LOGFILE 2>&1"
-CRON_CMD_EVENING="0 23 * * * $PYTHON $SCRIPT_DIR/main.py >> $LOGFILE 2>&1"
+CRON_CMD_MORNING="0 8 * * * $PYTHON $SCRIPT_DIR/main.py >> $LOGFILE 2>&1"
+CRON_CMD_EVENING="0 20 * * * $PYTHON $SCRIPT_DIR/main.py >> $LOGFILE 2>&1"
 
 echo "[3/3] Configuring cron jobs..."
 
@@ -42,9 +42,9 @@ EXISTING=$(crontab -l 2>/dev/null | grep -v "$SCRIPT_DIR/main.py" | grep -v "^TZ
 
 NEW_CRON="$EXISTING
 TZ=America/New_York
-# Telegram Finance Bot — 11:00 AM ET
+# Telegram Finance Bot — 8:00 AM ET
 $CRON_CMD_MORNING
-# Telegram Finance Bot — 11:00 PM ET
+# Telegram Finance Bot — 8:00 PM ET
 $CRON_CMD_EVENING"
 
 echo "$NEW_CRON" | crontab -
